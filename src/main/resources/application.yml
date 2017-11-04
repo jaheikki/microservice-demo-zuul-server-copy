@@ -1,0 +1,18 @@
+server:
+  port: 8080
+    
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    statusPageUrlPath: /info
+    healthCheckUrlPath: /health    
+    
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 60000  
